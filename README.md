@@ -1,8 +1,8 @@
-# Simulador de Memoria Cache
+# Simulador de Memória Cache
 
-Simulador de memoria cache associativa por conjunto com arquitetura configuravel, desenvolvido para a disciplina de Arquitetura de Computadores da Universidade de Caxias do Sul (UCS).
+Simulador de memória cache associativa por conjunto com arquitetura configurável, desenvolvido para a disciplina de Fundamentos de Arquitetura de Computadores da Universidade de Caxias do Sul (UCS).
 
-## Compilacao
+## Compilação
 
 ```bash
 gcc -O2 -o simula_cache simula_cache.c -lm
@@ -14,18 +14,18 @@ gcc -O2 -o simula_cache simula_cache.c -lm
 ./simula_cache <pol_escrita> <tam_linha> <num_linhas> <assoc> <hit_time> <pol_subst> <tempo_mp> <arquivo>
 ```
 
-**Parametros:**
+**Parâmetros:**
 
-| Parametro | Descricao |
+| Parâmetro | Descrição |
 |-----------|-----------|
 | `pol_escrita` | 0 = write-through, 1 = write-back |
-| `tam_linha` | Tamanho da linha em bytes (potencia de 2) |
-| `num_linhas` | Numero de linhas da cache (potencia de 2) |
-| `assoc` | Associatividade por conjunto (potencia de 2) |
+| `tam_linha` | Tamanho da linha em bytes (potência de 2) |
+| `num_linhas` | Número de linhas da cache (potência de 2) |
+| `assoc` | Associatividade por conjunto (potência de 2) |
 | `hit_time` | Tempo de acerto em nanossegundos |
 | `pol_subst` | LRU ou ALEATORIA |
-| `tempo_mp` | Tempo de leitura/escrita da memoria principal em nanossegundos |
-| `arquivo` | Arquivo de enderecos |
+| `tempo_mp` | Tempo de leitura/escrita da memória principal em nanossegundos |
+| `arquivo` | Arquivo de endereços |
 
 **Exemplo:**
 
@@ -36,21 +36,19 @@ gcc -O2 -o simula_cache simula_cache.c -lm
 ## Estrutura do Projeto
 
 ```
-simula_cache.c       # Codigo-fonte do simulador
-simula_cache         # Executavel compilado (arm64)
-teste.txt            # Arquivo de teste (100 enderecos)
-official.txt         # Arquivo oficial (51.200 enderecos)
-gerar_graficos.py    # Script para gerar graficos (matplotlib)
+simula_cache.c       # Código-fonte do simulador
+simula_cache         # Executável compilado (arm64)
+teste.txt            # Arquivo de teste (100 endereços)
+official.txt         # Arquivo oficial (51.200 endereços)
 relatorio/
-  main.tex           # Relatorio em LaTeX
-  main.pdf           # Relatorio compilado
-  figuras/           # Graficos gerados
+  main.pdf           # Relatório compilado
+  figuras/           # Gráficos gerados
 ```
 
-## Relatorio
+## Relatório
 
-O relatorio completo com analise dos experimentos esta disponivel em `relatorio/main.pdf`.
+O relatório completo com análise dos experimentos está disponível em `relatorio/main.pdf`.
 
 ## Autor
 
-Pedro Henrique Franca - Universidade de Caxias do Sul (UCS), 2026.
+Pedro Henrique França — Universidade de Caxias do Sul (UCS), 2026.
